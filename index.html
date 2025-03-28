@@ -44,10 +44,10 @@
       height: auto;
       display: block;
     }
-
     /* HEADER - with a background image */
     header {
-      background: url("headerlogo.png") center center no-repeat;
+      background: url("headerlogo.PNG") center center no-repeat;
+      /* IMPORTANT: Verify the file name on GitHub. GitHub Pages is case-sensitive. */
       background-size: cover;
       min-height: var(--header-height);
       display: flex;
@@ -59,7 +59,7 @@
     }
     header .site-title {
       font-size: 2.5em;
-      color: #d30070; /* A more contrasting color */
+      color: #d30070;
       font-family: 'PT Sans Narrow', sans-serif;
       margin-bottom: 8px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
@@ -70,7 +70,6 @@
       font-style: italic;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
     }
-
     /* NAVIGATION (sticky) */
     nav {
       background-color: var(--nav-bg);
@@ -97,7 +96,7 @@
       padding: 5px 10px;
       white-space: nowrap;
     }
-    /* Dropdown styling */
+    /* Dropdown styling for desktop */
     .dropdown {
       position: absolute;
       top: 100%;
@@ -137,7 +136,30 @@
       width: 250px;
       outline: none;
     }
-
+    /* Mobile Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--accent-color);
+      margin: 3px 0;
+      transition: all var(--transition-speed);
+    }
+    /* Mobile menu container */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: var(--nav-bg);
+      padding: 10px 0;
+    }
+    .mobile-menu a {
+      padding: 10px 20px;
+      border-top: 1px solid rgba(255,0,153,0.2);
+    }
     /* CONTENT SECTIONS */
     .content-section {
       padding: 20px;
@@ -149,7 +171,6 @@
       margin-top: 15px;
       font-family: 'PT Sans Narrow', sans-serif;
     }
-
     /* ENTRIES DATABASE SECTION */
     .entries {
       margin-top: 20px;
@@ -163,7 +184,6 @@
       border-radius: 4px;
       padding: 15px;
     }
-    /* Use an image with fallback onerror for each entry */
     .entry img {
       width: 100%;
       border-radius: 3px;
@@ -182,7 +202,6 @@
       font-size: 0.9em;
       color: #aaa;
     }
-
     /* OPTIONAL FEATURED GRID SECTION */
     .featured-grid {
       display: grid;
@@ -213,7 +232,6 @@
       margin: 10px 0;
       color: #111;
     }
-
     /* FOOTER */
     footer {
       background-color: var(--nav-bg);
@@ -227,7 +245,6 @@
       margin: 0 5px;
       font-size: 0.9em;
     }
-
     /* Back-to-Top Button */
     #back-to-top {
       position: fixed;
@@ -247,62 +264,53 @@
     #back-to-top:hover {
       transform: scale(1.05);
     }
-
+    /* SCROLLBAR CUSTOMIZATION */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: repeating-linear-gradient(
+        135deg,
+        #444 0,
+        #444 5px,
+        #333 5px,
+        #333 10px
+      );
+      border-radius: 2px;
+      border: 1px solid #000;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: repeating-linear-gradient(
+        135deg,
+        #666 0,
+        #666 5px,
+        #444 5px,
+        #444 10px
+      );
+    }
+    html {
+      scrollbar-color: #444 #111;
+      scrollbar-width: thin;
+    }
     /* MEDIA QUERIES */
     @media (max-width: 768px) {
-      .nav-left, .nav-right {
-        flex-wrap: wrap;
-        justify-content: center;
+      .nav-left {
+        display: none; /* Hide desktop nav items on mobile */
       }
-      .nav-item {
-        margin: 5px;
+      .hamburger {
+        display: flex;
       }
-      .nav-right input[type="search"] {
-        width: 140px;
+      .mobile-menu {
+        display: none;
       }
-      .nav-right input[type="search"]:focus {
-        width: 200px;
+      .nav-right {
+        flex-grow: 1;
+        justify-content: flex-end;
       }
     }
-/* ===============================
-   SCROLLBAR CUSTOMIZATION
-   =============================== */
-
-/* Chrome, Safari, Edge, Opera */
-::-webkit-scrollbar {
-  width: 10px;               /* Width of the scrollbar */
-}
-::-webkit-scrollbar-track {
-  background: #111;          /* Dark background for the track */
-}
-::-webkit-scrollbar-thumb {
-  /* A "rough" repeating gradient to give some texture-like pattern */
-  background: repeating-linear-gradient(
-    135deg,
-    #444 0,
-    #444 5px,
-    #333 5px,
-    #333 10px
-  );
-  border-radius: 2px;        /* Slight rounding; remove or reduce if you want it rougher */
-  border: 1px solid #000;    /* A dark border for extra definition */
-}
-::-webkit-scrollbar-thumb:hover {
-  background: repeating-linear-gradient(
-    135deg,
-    #666 0,
-    #666 5px,
-    #444 5px,
-    #444 10px
-  );
-}
-
-/* Firefox (limited styling) */
-html {
-  scrollbar-color: #444 #111; /* thumb color, track color */
-  scrollbar-width: thin;      /* can be auto, thin, or none */
-}
-
   </style>
 </head>
 <body>
@@ -314,6 +322,12 @@ html {
 
   <!-- NAVIGATION (sticky) -->
   <nav>
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="nav-left">
       <div class="nav-item"><a href="#about">About</a></div>
       <div class="nav-item">
@@ -339,20 +353,28 @@ html {
       <input type="search" placeholder="Search records...">
     </div>
   </nav>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#database">Database</a>
+    <a href="#community">Community</a>
+    <a href="system.html" target="_blank">System</a>
+    <a href="contact.html" target="_blank">Contact</a>
+  </div>
 
   <!-- MAIN CONTENT -->
   <div class="content-section" id="about">
     <h2>Welcome to the OUROBOROS Archive</h2>
     <p>
-     The Ouroboros Organization is a covert, intertemporal force dedicated to the preservation of human history against external manipulation. We do not serve any nation, ideology, or era—our only allegiance is to the integrity of the timeline itself.
-
-<br>Operating from a facility beyond the normal flow of time, we monitor, intervene, and, when necessary, rewrite reality to prevent catastrophic paradoxes and incursions from higher-dimensional entities. Our agents include singularities—individuals immune to timeline alterations—and specialists equipped with cutting-edge technology capable of resisting the shifting currents of time.
-
-<br>Across the ages, countless threats have attempted to unmake our existence. We have fought wars unseen, in battlefields both ancient and yet to come. We are the last barrier between history and annihilation.
-
-<br>We are Ouroboros. The keepers of time. The architects of survival.
-
-<br><i>"History is not a record. It is a battlefield."</i>
+      The Ouroboros Organization is a covert, intertemporal force dedicated to the preservation of human history against external manipulation. We do not serve any nation, ideology, or era—our only allegiance is to the integrity of the timeline itself.
+      <br><br>
+      Operating from a facility beyond the normal flow of time, we monitor, intervene, and, when necessary, rewrite reality to prevent catastrophic paradoxes and incursions from higher-dimensional entities. Our agents include singularities—individuals immune to timeline alterations—and specialists equipped with cutting-edge technology capable of resisting the shifting currents of time.
+      <br><br>
+      Across the ages, countless threats have attempted to unmake our existence. We have fought wars unseen, in battlefields both ancient and yet to come. We are the last barrier between history and annihilation.
+      <br><br>
+      We are Ouroboros. The keepers of time. The architects of survival.
+      <br><br>
+      <i>"History is not a record. It is a battlefield."</i>
     </p>
   </div>
 
@@ -377,7 +399,6 @@ html {
           <p><em>Member of the Council, does not take orders from any department.</em></p>
         </div>
       </article>
-
       <!-- ENTRY #999999: Noah -->
       <article class="entry">
         <img
@@ -395,8 +416,7 @@ html {
           <p><em>Member of the Council, does not take orders from any department.</em></p>
         </div>
       </article>
-
-      <!-- ENTRY #000005: The Oracle (Example Third Entry) -->
+      <!-- ENTRY #000005: The Oracle -->
       <article class="entry">
         <img
           src="images/000005.png"
@@ -407,7 +427,7 @@ html {
         <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
         <p><strong>Level:</strong> 0</p>
         <p><strong>Status:</strong> Member</p>
-        <p><strong>Description:</strong> A omniscient seer integrated with machines, the mind of the organization.</p>
+        <p><strong>Description:</strong> An omniscient seer integrated with machines, the mind of the organization.</p>
         <div class="details">
           <p><strong>Notes:</strong> She sees all potential timelines, bridging the gap between reality and possibility.</p>
           <p><em>Member of the Council, does not take orders from any department.</em></p>
@@ -458,6 +478,17 @@ html {
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Hamburger menu toggle for mobile
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    hamburger.addEventListener("click", () => {
+      if (mobileMenu.style.display === "flex") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "flex";
+      }
+    });
   </script>
 </body>
 </html>
