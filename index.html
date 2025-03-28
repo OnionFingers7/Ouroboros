@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OUROBOROS Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600;700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #111;
+      --text-color: #ddd;
+      --accent-color: #ff0099;
+      --nav-bg: rgba(34, 34, 34, 0.95);
+      --header-height: 250px;
+      --transition-speed: 0.3s;
+      --btn-bg: #333;
+    }
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: var(--accent-color);
+      transition: color var(--transition-speed);
+    }
+    a:hover {
+      color: #fff;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* HEADER - with a background image */
+    header {
+      background: url("headerlogo.PNG") center center no-repeat;
+      background-size: cover;
+      min-height: var(--header-height);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    header .site-title {
+      font-size: 2.5em;
+      color: #d30070; /* A more contrasting color */
+      font-family: 'PT Sans Narrow', sans-serif;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    }
+    header .tagline {
+      font-size: 1.1em;
+      color: #c0c0c0;
+      font-style: italic;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+    }
+
+    /* NAVIGATION (sticky) */
+    nav {
+      background-color: var(--nav-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      position: relative;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 0;
+    }
+    .nav-item a {
+      padding: 5px 10px;
+      white-space: nowrap;
+    }
+    /* Dropdown styling */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--nav-bg);
+      border: 1px solid rgba(255,0,153,0.3);
+      display: none;
+      min-width: 160px;
+      z-index: 200;
+    }
+    .dropdown a {
+      display: block;
+      padding: 8px 12px;
+      white-space: nowrap;
+    }
+    .dropdown a:hover {
+      background-color: rgba(255, 0, 153, 0.2);
+    }
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-right input[type="search"] {
+      padding: 6px 10px;
+      font-size: 1em;
+      width: 180px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      background-color: #333;
+      color: var(--text-color);
+      transition: width var(--transition-speed);
+    }
+    .nav-right input[type="search"]:focus {
+      width: 250px;
+      outline: none;
+    }
+
+    /* CONTENT SECTIONS */
+    .content-section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2, h3 {
+      color: var(--accent-color);
+      margin-top: 15px;
+      font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    /* ENTRIES DATABASE SECTION */
+    .entries {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+    .entry {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 15px;
+    }
+    /* Use an image with fallback onerror for each entry */
+    .entry img {
+      width: 100%;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .entry .entry-title {
+      font-size: 1.2em;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .entry p {
+      margin: 5px 0;
+    }
+    .entry .details {
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    /* OPTIONAL FEATURED GRID SECTION */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 20px;
+    }
+    .box {
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0 0 6px -3px rgba(5,5,5,0.75);
+      padding: 10px;
+      transition: transform var(--transition-speed);
+    }
+    .box:hover {
+      transform: scale(1.02);
+    }
+    .box .title {
+      font-family: 'PT Sans Narrow', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent-color);
+      padding: 0.5em;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .box p {
+      margin: 10px 0;
+      color: #111;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--nav-bg);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.8em;
+      color: #bbb;
+    }
+    footer a {
+      color: var(--accent-color);
+      margin: 0 5px;
+      font-size: 0.9em;
+    }
+
+    /* Back-to-Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #222;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      transition: opacity var(--transition-speed), transform var(--transition-speed);
+      z-index: 100;
+      font-size: 1em;
+      border: 1px solid #444;
+    }
+    #back-to-top:hover {
+      transform: scale(1.05);
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .nav-left, .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-item {
+        margin: 5px;
+      }
+      .nav-right input[type="search"] {
+        width: 140px;
+      }
+      .nav-right input[type="search"]:focus {
+        width: 200px;
+      }
+    }
+/* ===============================
+   SCROLLBAR CUSTOMIZATION
+   =============================== */
+
+/* Chrome, Safari, Edge, Opera */
+::-webkit-scrollbar {
+  width: 10px;               /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: #111;          /* Dark background for the track */
+}
+::-webkit-scrollbar-thumb {
+  /* A "rough" repeating gradient to give some texture-like pattern */
+  background: repeating-linear-gradient(
+    135deg,
+    #444 0,
+    #444 5px,
+    #333 5px,
+    #333 10px
+  );
+  border-radius: 2px;        /* Slight rounding; remove or reduce if you want it rougher */
+  border: 1px solid #000;    /* A dark border for extra definition */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: repeating-linear-gradient(
+    135deg,
+    #666 0,
+    #666 5px,
+    #444 5px,
+    #444 10px
+  );
+}
+
+/* Firefox (limited styling) */
+html {
+  scrollbar-color: #444 #111; /* thumb color, track color */
+  scrollbar-width: thin;      /* can be auto, thin, or none */
+}
+
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="site-title">OUROBOROS</div>
+    <div class="tagline">"History is not a record, it is a battlefield."</div>
+  </header>
+
+  <!-- NAVIGATION (sticky) -->
+  <nav>
+    <div class="nav-left">
+      <div class="nav-item"><a href="#about">About</a></div>
+      <div class="nav-item">
+        <a href="#database">Database</a>
+        <div class="dropdown">
+          <a href="articles.html" target="_blank">Articles</a>
+          <a href="guidelines.html" target="_blank">Guidelines</a>
+          <a href="history.html" target="_blank">History</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#community">Community</a>
+        <div class="dropdown">
+          <a href="forum.html" target="_blank">Forum</a>
+          <a href="contribute.html" target="_blank">Contribute</a>
+          <a href="faq.html" target="_blank">FAQ</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="system.html" target="_blank">System</a></div>
+      <div class="nav-item"><a href="contact.html" target="_blank">Contact</a></div>
+    </div>
+    <div class="nav-right">
+      <input type="search" placeholder="Search records...">
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-section" id="about">
+    <h2>Welcome to the OUROBOROS Archive</h2>
+    <p>
+      The OUROBOROS Archive is a living repository of mysterious entries, anomalies, and historical events.
+      Explore our comprehensive database where every entry is part of a dynamic narrative.
+    </p>
+  </div>
+
+  <!-- ENTRIES DATABASE SECTION -->
+  <div class="content-section" id="database">
+    <h2>Entries Database</h2>
+    <div class="entries">
+      <!-- ENTRY #000001: Adam -->
+      <article class="entry">
+        <img
+          src="#000001.png"
+          alt="#000001: Adam"
+          onerror="this.onerror=null; this.src='logo.png';"
+        />
+        <div class="entry-title">#000001: Adam</div>
+        <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
+        <p><strong>Level:</strong> 0</p>
+        <p><strong>Status:</strong> Member</p>
+        <p><strong>Description:</strong> One of the founders, believed to be the first Singularity.</p>
+        <div class="details">
+          <p><strong>Notes:</strong> Appears in all time periods simultaneously.</p>
+          <p><em>Member of the Council, does not take orders from any department.</em></p>
+        </div>
+      </article>
+
+      <!-- ENTRY #999999: Noah -->
+      <article class="entry">
+        <img
+          src="noah.jpg"
+          alt="#999999: Noah"
+          onerror="this.onerror=null; this.src='logo.png';"
+        />
+        <div class="entry-title">#999999: Noah</div>
+        <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
+        <p><strong>Level:</strong> 0</p>
+        <p><strong>Status:</strong> Member</p>
+        <p><strong>Description:</strong> The last human in the far future, she herself is a paradox.</p>
+        <div class="details">
+          <p><strong>Notes:</strong> As long as she exists, the war will not end.</p>
+          <p><em>Member of the Council, does not take orders from any department.</em></p>
+        </div>
+      </article>
+
+      <!-- ENTRY #000005: The Oracle (Example Third Entry) -->
+      <article class="entry">
+        <img
+          src="#000005.PNG"
+          alt="#000005: The Oracle"
+          onerror="this.onerror=null; this.src='logo.png';"
+        />
+        <div class="entry-title">#000005: The Oracle</div>
+        <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
+        <p><strong>Level:</strong> 0</p>
+        <p><strong>Status:</strong> Member</p>
+        <p><strong>Description:</strong> A omniscient seer integrated with machines, the mind of the organization.</p>
+        <div class="details">
+          <p><strong>Notes:</strong> She sees all potential timelines, bridging the gap between reality and possibility.</p>
+          <p><em>Member of the Council, does not take orders from any department.</em></p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- OPTIONAL FEATURED GRID SECTION -->
+  <div class="content-section" id="featured">
+    <h2>Featured Stories</h2>
+    <div class="featured-grid">
+      <div class="box">
+        <div class="title">Ouroboros News</div>
+        <p>Breaking updates on temporal anomalies and event coverage. Stay informed about the latest discoveries and containment efforts.</p>
+      </div>
+      <div class="box">
+        <div class="title">Community Spotlight</div>
+        <p>Read about community contributions, featured research, and collaborative efforts that drive our archive forward.</p>
+      </div>
+      <div class="box">
+        <div class="title">Interactive Timelines</div>
+        <p>Explore timelines that evolve with each discovery, showcasing the interplay between history and anomaly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Ouroboros Organization. All rights reserved.</p>
+    <p>
+      <a href="terms.html" target="_blank">Terms of Service</a> | 
+      <a href="licenses.html" target="_blank">Licenses</a> | 
+      <a href="copyright.html" target="_blank">Copyright</a>
+      | <a href="contact.html" target="_blank">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <div id="back-to-top" onclick="scrollToTop()">↑ Top</div>
+
+  <script>
+    // Back-to-Top Button Functionality
+    window.addEventListener("scroll", () => {
+      const btn = document.getElementById("back-to-top");
+      btn.style.display = (window.scrollY > 300) ? "block" : "none";
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
