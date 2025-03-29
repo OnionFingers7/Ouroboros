@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>OUROBOROS Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600;700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -44,10 +44,9 @@
       height: auto;
       display: block;
     }
-    /* HEADER - with a background image */
+    /* HEADER - with background image in the images folder (WebP) */
     header {
-      background: url("headerlogo.PNG") center center no-repeat;
-      /* IMPORTANT: Verify the file name on GitHub. GitHub Pages is case-sensitive. */
+      background: url("images/headerlogo.webp") center center no-repeat;
       background-size: cover;
       min-height: var(--header-height);
       display: flex;
@@ -149,12 +148,16 @@
       margin: 3px 0;
       transition: all var(--transition-speed);
     }
-    /* Mobile menu container */
+    /* Mobile menu container fixed below nav */
     .mobile-menu {
       display: none;
-      flex-direction: column;
+      position: fixed;
+      top: 60px; /* adjust based on nav height */
+      left: 0;
+      width: 100%;
       background-color: var(--nav-bg);
-      padding: 10px 0;
+      flex-direction: column;
+      z-index: 90;
     }
     .mobile-menu a {
       padding: 10px 20px;
@@ -188,6 +191,7 @@
       width: 100%;
       border-radius: 3px;
       margin-bottom: 10px;
+      /* If an image fails, onerror sets fallback with fixed dimensions */
     }
     .entry .entry-title {
       font-size: 1.2em;
@@ -303,9 +307,6 @@
       .hamburger {
         display: flex;
       }
-      .mobile-menu {
-        display: none;
-      }
       .nav-right {
         flex-grow: 1;
         justify-content: flex-end;
@@ -385,9 +386,9 @@
       <!-- ENTRY #000001: Adam -->
       <article class="entry">
         <img
-          src="images/000001.png"
+          src="images/000001.webp"
           alt="#000001: Adam"
-          onerror="this.onerror=null; this.src='logo.png';"
+          onerror="this.onerror=null; this.src='images/logo.webp'; this.style.width='400px'; this.style.height='500px'; this.style.objectFit='cover';"
         />
         <div class="entry-title">#000001: Adam</div>
         <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
@@ -402,9 +403,9 @@
       <!-- ENTRY #999999: Noah -->
       <article class="entry">
         <img
-          src="images/999999.png"
+          src="images/999999.webp"
           alt="#999999: Noah"
-          onerror="this.onerror=null; this.src='logo.png';"
+          onerror="this.onerror=null; this.src='images/logo.webp'; this.style.width='400px'; this.style.height='500px'; this.style.objectFit='cover';"
         />
         <div class="entry-title">#999999: Noah</div>
         <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
@@ -419,9 +420,9 @@
       <!-- ENTRY #000005: The Oracle -->
       <article class="entry">
         <img
-          src="images/000005.png"
+          src="images/000005.webp"
           alt="#000005: The Oracle"
-          onerror="this.onerror=null; this.src='logo.png';"
+          onerror="this.onerror=null; this.src='images/logo.webp'; this.style.width='400px'; this.style.height='500px'; this.style.objectFit='cover';"
         />
         <div class="entry-title">#000005: The Oracle</div>
         <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
@@ -458,7 +459,6 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2025 Ouroboros Organization. All rights reserved.</p>
-    <p>A collaboration of Tùng and ChatGPT</p>
     <p>
       <a href="terms.html" target="_blank">Terms of Service</a> | 
       <a href="licenses.html" target="_blank">Licenses</a> | 
@@ -479,7 +479,6 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
     // Hamburger menu toggle for mobile
     const hamburger = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
