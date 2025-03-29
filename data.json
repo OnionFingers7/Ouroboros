@@ -1,0 +1,82 @@
+[
+  {
+    "unique_identifier": "SCP-00001",
+    "codename": "Adam - The History Fog",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "The History Fog",
+      "description": "All records of his past are obscured, making it impossible to track his true origins."
+    },
+    "level": 0,
+    "description": "Adam is one of the founding members of the Ouroboros Organization. His existence is shrouded in mystery, as every attempt to document his past is erased. He appears randomly throughout history to guide the Foundation in critical moments.",
+    "containment_procedures": "Due to his unique nature, standard containment is not applicable. He is monitored indirectly through the Foundation's network.",
+    "discovery_log": "First observed during the early formation of Ouroboros. All documentation is classified due to his elusive nature.",
+    "addenda_notes": "Subject's data is continuously lost and recovered; further research is ongoing.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "SCP-00005",
+    "codename": "The Oracle - The Machine Seer",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "Infinite Sight",
+      "description": "A first-generation seer integrated with advanced machines, allowing her to process immense amounts of future data. Serves as the strategic mind of the organization."
+    },
+    "level": 0,
+    "description": "The Oracle is integrated with the core systems of Ouroboros, controlling the base and providing real-time analysis of timelines. Her origins are undocumented; she exists solely to predict and guide the organization's actions.",
+    "containment_procedures": "Maintained within the Ouroboros mainframe; physical containment is unnecessary due to her merged nature.",
+    "discovery_log": "Discovered during a major temporal anomaly event. Full records are classified.",
+    "addenda_notes": "Subject is vital to operational decisions and remains unaffected by temporal changes.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "SCP-00391",
+    "codename": "Holo - The Librarian",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "Watcher Library",
+      "description": "Can record and retrieve events across time as if they were stored in a vast library of books. Capable of preserving history even when it is altered."
+    },
+    "level": 0,
+    "description": "Holo is the embodiment of the world's law of record-keeping, maintaining the Watcher Library which logs all events—even those that have been erased from conventional history.",
+    "containment_procedures": "Remains integrated with the organization's archival systems under continuous monitoring.",
+    "discovery_log": "Identified during the initial establishment of the Ouroboros archive. Data continuity is ensured by direct integration with the Watcher Library.",
+    "addenda_notes": "Essential for tracking and validating the integrity of the timeline.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "SCP-00027",
+    "codename": "Cain - The Sage",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "The Eternal Witness",
+      "description": "Has lived countless lives in various roles throughout human history and possesses the ability to recognize fixed points in time."
+    },
+    "level": 0,
+    "description": "Cain, known as The Sage, is an immortal witness from humanity’s earliest eras. Having lived as king, beggar, scholar, and more, he embodies the wisdom and immutable laws governing history.",
+    "containment_procedures": "Subject is permitted freedom within secure temporal zones; standard containment is unnecessary due to his natural integration with history.",
+    "discovery_log": "Chronicles of his existence span across unrecorded eras. His presence is recognized as a natural constant in the timeline.",
+    "addenda_notes": "Subject remains a pivotal advisor on the immutable aspects of history.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "SCP-999999",
+    "codename": "Noah - The Survivor",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "The Absolute Event",
+      "description": "Ensures that humanity endures across all possible futures. Any attempt to erase or alter Noah results in an immediate temporal correction ensuring her survival."
+    },
+    "level": 0,
+    "description": "Noah represents the future that must come to pass—the last surviving human across all possible timelines. Her existence acts as a fixed point, ensuring that humanity endures.",
+    "containment_procedures": "Due to paradox immunity, traditional containment is unnecessary. The subject is monitored to ensure timeline integrity.",
+    "discovery_log": "Identified as a key temporal anomaly ensuring human survival. All records of her existence are classified.",
+    "addenda_notes": "Subject is pivotal for the continuity of human history. Her survival is a guaranteed event in the timeline.",
+    "affiliations": ["Ouroboros Organization"]
+  }
+]
