@@ -128,7 +128,7 @@
     "affiliations": ["Ouroboros Organization"]
   },
   {
-    "unique_identifier": "ARC-00189",
+    "unique_identifier": "ARC-01189",
     "codename": "The Coin of the Dead",
     "classification": "Artifact",
     "status": "Lost",
@@ -176,7 +176,7 @@
     "affiliations": ["Ouroboros Organization"]
   },
   {
-    "unique_identifier": "ARC-00888",
+    "unique_identifier": "ARC-07888",
     "codename": "Benjamin Button",
     "classification": "Entity",
     "status": "Active, Rogue",
