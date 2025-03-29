@@ -44,7 +44,7 @@
       height: auto;
       display: block;
     }
-    /* HEADER - background image in WebP from images folder */
+    /* HEADER */
     header {
       background: url("images/headerlogo.webp") center center no-repeat;
       background-size: cover;
@@ -173,6 +173,17 @@
       color: var(--accent-color);
       margin-top: 15px;
       font-family: 'PT Sans Narrow', sans-serif;
+    }
+    /* Refresh Icon next to Entries Database heading */
+    .refresh-icon {
+      font-size: 1em;
+      color: var(--accent-color);
+      cursor: pointer;
+      margin-left: 10px;
+      transition: transform var(--transition-speed);
+    }
+    .refresh-icon:hover {
+      transform: rotate(90deg);
     }
     /* ENTRIES DATABASE SECTION */
     .entries {
@@ -375,7 +386,7 @@
 
   <!-- ENTRIES DATABASE SECTION -->
   <div class="content-section" id="database">
-    <h2>Entries Database</h2>
+    <h2>Entries Database <span class="refresh-icon" id="refreshIcon" title="Refresh Entries">&#x21BB;</span></h2>
     <div class="entries" id="entriesContainer">
       <!-- Entries will be dynamically generated here -->
     </div>
@@ -424,13 +435,14 @@
     
     // Function to create an entry element from JSON data
     function createEntryElement(entry) {
-      // Remove the "ARC-" prefix from the unique_identifier and use the remainder as the image filename
+      // Extract numeric part from unique_identifier (removing "ARC-")
       const imageName = entry.unique_identifier.replace("ARC-", "") + ".webp";
       const imgSrc = "images/" + imageName;
-      // Build the article element
+      
       const article = document.createElement('article');
       article.className = 'entry';
-      // Create the image element with fallback onerror
+      
+      // Create image element with fallback
       const img = document.createElement('img');
       img.src = imgSrc;
       img.alt = `${entry.unique_identifier}: ${entry.codename}`;
@@ -442,12 +454,13 @@
         this.style.objectFit = "cover";
       };
       article.appendChild(img);
-      // Create the title and details
+      
+      // Create title and other content
       const title = document.createElement('div');
       title.className = 'entry-title';
       title.textContent = `${entry.unique_identifier}: ${entry.codename}`;
       article.appendChild(title);
-      // Create other paragraphs
+      
       article.innerHTML += `
         <p><strong>Classification:</strong> ${entry.classification}</p>
         <p><strong>Status:</strong> ${entry.status}</p>
@@ -457,21 +470,31 @@
           <p><strong>Notes:</strong> ${entry.addenda_notes}</p>
         </div>
       `;
+      
       return article;
     }
     
-    // Fetch JSON data and populate entries
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        const selectedEntries = selectRandom(data, 3);
-        const container = document.getElementById('entriesContainer');
-        selectedEntries.forEach(entry => {
-          container.appendChild(createEntryElement(entry));
-        });
-      })
-      .catch(error => console.error('Error loading JSON:', error));
-      
+    // Function to load entries
+    function loadEntries() {
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          const selectedEntries = selectRandom(data, 3);
+          const container = document.getElementById('entriesContainer');
+          container.innerHTML = ''; // Clear existing entries
+          selectedEntries.forEach(entry => {
+            container.appendChild(createEntryElement(entry));
+          });
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+    }
+    
+    // Load entries on page load
+    loadEntries();
+    
+    // Refresh icon functionality
+    document.getElementById('refreshIcon').addEventListener('click', loadEntries);
+    
     // Back-to-Top Button Functionality
     window.addEventListener("scroll", () => {
       const btn = document.getElementById("back-to-top");
