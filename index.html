@@ -44,7 +44,7 @@
       height: auto;
       display: block;
     }
-    /* HEADER - with background image in the images folder (WebP) */
+    /* HEADER - background image in WebP from images folder */
     header {
       background: url("images/headerlogo.webp") center center no-repeat;
       background-size: cover;
@@ -152,7 +152,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 60px; /* adjust based on nav height */
+      top: 60px; /* Adjust based on nav height */
       left: 0;
       width: 100%;
       background-color: var(--nav-bg);
@@ -186,12 +186,6 @@
       border: 1px solid #444;
       border-radius: 4px;
       padding: 15px;
-    }
-    .entry img {
-      width: 100%;
-      border-radius: 3px;
-      margin-bottom: 10px;
-      /* If an image fails, onerror sets fallback with fixed dimensions */
     }
     .entry .entry-title {
       font-size: 1.2em;
@@ -382,58 +376,8 @@
   <!-- ENTRIES DATABASE SECTION -->
   <div class="content-section" id="database">
     <h2>Entries Database</h2>
-    <div class="entries">
-      <!-- ENTRY #000001: Adam -->
-      <article class="entry">
-        <img
-          src="images/000001.webp"
-          alt="#000001: Adam"
-          onerror="this.onerror=null; this.src='images/logo.webp'; this.style.width='400px'; this.style.height='500px'; this.style.objectFit='cover';"
-        />
-        <div class="entry-title">#000001: Adam</div>
-        <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
-        <p><strong>Level:</strong> 0</p>
-        <p><strong>Status:</strong> Member</p>
-        <p><strong>Description:</strong> One of the founders, believed to be the first Singularity.</p>
-        <div class="details">
-          <p><strong>Notes:</strong> Appears in all time periods simultaneously.</p>
-          <p><em>Member of the Council, does not take orders from any department.</em></p>
-        </div>
-      </article>
-      <!-- ENTRY #999999: Noah -->
-      <article class="entry">
-        <img
-          src="images/999999.webp"
-          alt="#999999: Noah"
-          onerror="this.onerror=null; this.src='images/logo.webp'; this.style.width='400px'; this.style.height='500px'; this.style.objectFit='cover';"
-        />
-        <div class="entry-title">#999999: Noah</div>
-        <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
-        <p><strong>Level:</strong> 0</p>
-        <p><strong>Status:</strong> Member</p>
-        <p><strong>Description:</strong> The last human in the far future, she herself is a paradox.</p>
-        <div class="details">
-          <p><strong>Notes:</strong> As long as she exists, the war will not end.</p>
-          <p><em>Member of the Council, does not take orders from any department.</em></p>
-        </div>
-      </article>
-      <!-- ENTRY #000005: The Oracle -->
-      <article class="entry">
-        <img
-          src="images/000005.webp"
-          alt="#000005: The Oracle"
-          onerror="this.onerror=null; this.src='images/logo.webp'; this.style.width='400px'; this.style.height='500px'; this.style.objectFit='cover';"
-        />
-        <div class="entry-title">#000005: The Oracle</div>
-        <p><strong>Classification:</strong> Entity/First Gen Singularity.</p>
-        <p><strong>Level:</strong> 0</p>
-        <p><strong>Status:</strong> Member</p>
-        <p><strong>Description:</strong> An omniscient seer integrated with machines, the mind of the organization.</p>
-        <div class="details">
-          <p><strong>Notes:</strong> She sees all potential timelines, bridging the gap between reality and possibility.</p>
-          <p><em>Member of the Council, does not take orders from any department.</em></p>
-        </div>
-      </article>
+    <div class="entries" id="entriesContainer">
+      <!-- Entries will be dynamically generated here -->
     </div>
   </div>
 
@@ -470,7 +414,64 @@
   <!-- Back-to-Top Button -->
   <div id="back-to-top" onclick="scrollToTop()">↑ Top</div>
 
+  <!-- Script to load entries from data.json and display 3 random entries -->
   <script>
+    // Function to randomly select N elements from an array
+    function selectRandom(arr, n) {
+      const shuffled = arr.sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, n);
+    }
+    
+    // Function to create an entry element from JSON data
+    function createEntryElement(entry) {
+      // Remove the "ARC-" prefix from the unique_identifier and use the remainder as the image filename
+      const imageName = entry.unique_identifier.replace("ARC-", "") + ".webp";
+      const imgSrc = "images/" + imageName;
+      // Build the article element
+      const article = document.createElement('article');
+      article.className = 'entry';
+      // Create the image element with fallback onerror
+      const img = document.createElement('img');
+      img.src = imgSrc;
+      img.alt = `${entry.unique_identifier}: ${entry.codename}`;
+      img.onerror = function() {
+        this.onerror = null;
+        this.src = "images/logo.webp";
+        this.style.width = "400px";
+        this.style.height = "500px";
+        this.style.objectFit = "cover";
+      };
+      article.appendChild(img);
+      // Create the title and details
+      const title = document.createElement('div');
+      title.className = 'entry-title';
+      title.textContent = `${entry.unique_identifier}: ${entry.codename}`;
+      article.appendChild(title);
+      // Create other paragraphs
+      article.innerHTML += `
+        <p><strong>Classification:</strong> ${entry.classification}</p>
+        <p><strong>Status:</strong> ${entry.status}</p>
+        <p><strong>Level:</strong> ${entry.level}</p>
+        <p><strong>Description:</strong> ${entry.description}</p>
+        <div class="details">
+          <p><strong>Notes:</strong> ${entry.addenda_notes}</p>
+        </div>
+      `;
+      return article;
+    }
+    
+    // Fetch JSON data and populate entries
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const selectedEntries = selectRandom(data, 3);
+        const container = document.getElementById('entriesContainer');
+        selectedEntries.forEach(entry => {
+          container.appendChild(createEntryElement(entry));
+        });
+      })
+      .catch(error => console.error('Error loading JSON:', error));
+      
     // Back-to-Top Button Functionality
     window.addEventListener("scroll", () => {
       const btn = document.getElementById("back-to-top");
@@ -479,6 +480,7 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    
     // Hamburger menu toggle for mobile
     const hamburger = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
