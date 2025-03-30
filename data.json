@@ -1,1 +1,194 @@
-[{"unique_identifier":"ARC-00001","codename":"Adam - The History Fog","classification":"Entity","status":"Active, Joined","power_abilities":{"name":"The History Fog","description":"All records of his past are obscured, making it impossible to track his true origins."},"level":0,"description":"Adam is one of the founding members of the Ouroboros Organization. His existence is shrouded in mystery—every attempt to document him is lost in the fog of time. He appears unpredictably to guide the Foundation at crucial moments.","containment_procedures":"Due to his nature, standard containment is not applicable. He is monitored indirectly via the Foundation’s temporal network.","discovery_log":"First observed during the early formation of Ouroboros. All records have been obscured by his unique power.","addenda_notes":"Ongoing research into subject's interactions with temporal anomalies.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-00005","codename":"The Oracle - The Machine Seer","classification":"Entity","status":"Active, Joined","power_abilities":{"name":"Infinite Sight","description":"A first-generation seer integrated with advanced machinery, allowing her to process vast amounts of future data. She remains immune to temporal paradoxes."},"level":1,"description":"The Oracle is fused with the core systems of Ouroboros, acting as the strategic mind behind operations. Her origins have been erased from the timeline, leaving only her function as a predictive engine.","containment_procedures":"Maintained within the Ouroboros mainframe; physical containment is unnecessary.","discovery_log":"Discovered during a significant temporal anomaly event. Full records remain classified.","addenda_notes":"Critical for operational decisions and timeline stabilization.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-00391","codename":"Holo - The Librarian","classification":"Entity","status":"Active, Joined","power_abilities":{"name":"Watcher Library","description":"An esper power that records all events in time in a vast, metaphysical library. Capable of preserving even those events altered or erased from conventional history."},"level":2,"description":"Holo embodies the law of record-keeping in the world. Through the Watcher Library, every anomaly is logged and archived, making him indispensable for maintaining timeline integrity.","containment_procedures":"Integrated with Ouroboros archival systems; continuous monitoring is maintained.","discovery_log":"Established during the Foundation's initial efforts to catalog temporal anomalies.","addenda_notes":"Serves as the primary reference for all historical and temporal data.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-00027","codename":"Cain - The Sage","classification":"Entity","status":"Active, Joined","power_abilities":{"name":"The Eternal Witness","description":"An immortal anomaly who has lived countless lives as king, beggar, scholar, and merchant. Notably known in one era as Solomon, though devoid of demonic influences."},"level":3,"description":"Cain is a timeless observer, embodying the wisdom and immutable laws of history. His experiences span across eras, and he advises the Foundation on the unalterable aspects of the timeline.","containment_procedures":"Subject is allowed freedom within secure temporal zones; his natural integration with history precludes standard containment.","discovery_log":"Records span across unrecorded eras; his presence is accepted as a natural constant.","addenda_notes":"A pivotal advisor on the immutable laws of time.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-999999","codename":"Noah - The Survivor","classification":"Entity","status":"Active, Joined","power_abilities":{"name":"The Absolute Event","description":"Ensures that humanity endures across all possible futures. Attempts to erase or alter Noah result in immediate temporal corrections that guarantee her survival."},"level":4,"description":"Noah represents the future that must occur—the living proof of humanity’s continued existence. Her presence is a fixed point that stabilizes the timeline, making extinction impossible.","containment_procedures":"Traditional containment is not applicable due to paradox immunity; the subject is monitored for timeline integrity.","discovery_log":"Identified as a key temporal anomaly whose survival ensures a viable future for humanity.","addenda_notes":"Her continued existence is a guaranteed event across all recorded history.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-43271","codename":"The Blade of Eternal Dusk","classification":"Artifact","status":"Secure Containment","power_abilities":{"name":"Time Freeze","description":"A longsword that freezes time within its cutting path for exactly 4 seconds. The user is also affected, acting only after time resumes."},"level":4,"description":"This black longsword with glowing red runes was discovered on an ancient battlefield. Its origins are unknown, and its potential for halting temporal flow makes it a high-risk artifact.","containment_procedures":"Stored in a secure temporal vault; only accessible under strict protocols.","discovery_log":"Recovered from ancient ruins; further study is ongoing.","addenda_notes":"Artifact exhibits unpredictable effects when wielded by untrained users.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-01077","codename":"The Gentleman’s Pocket Watch","classification":"Artifact","status":"Contained","power_abilities":{"name":"Temporal Counter","description":"A gold pocket watch that counts the number of candies its user eats. Its count remains unaffected by any time alterations—even if the user is erased from history."},"level":7,"description":"An innocuous-looking pocket watch with an anomalous property: its count continues regardless of timeline changes. It has become a quirky yet reliable tool for recording minor events.","containment_procedures":"Stored in a low-security archive; periodic testing is performed to verify count integrity.","discovery_log":"Found on a collector's shelf; its anomaly was discovered during routine testing.","addenda_notes":"Considered low risk but of interest for its temporal stability.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-77777","codename":"The Revenant","classification":"Entity","status":"Unknown","power_abilities":{"name":"Perpetual Resurrection","description":"A man who revives at any point in his past life after death, preserving his memories and enabling him to alter his decisions in each iteration."},"level":2,"description":"Known as The Revenant, this anomaly has survived for millennia by continuously resurrecting. His motives remain elusive, and his ability to reappear in different eras makes him a persistent enigma.","containment_procedures":"Currently uncontainable; monitored through multitemporal tracking systems.","discovery_log":"Subject observed across numerous historical records; classified as high priority due to unpredictability.","addenda_notes":"Further research is required to determine his long-term impact on the timeline.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-01189","codename":"The Coin of the Dead","classification":"Artifact","status":"Lost","power_abilities":{"name":"Memory Exchange","description":"A silver coin that allows its user to exchange one memory with a deceased individual. The dead briefly return to impart information before vanishing; the user permanently loses the exchanged memory."},"level":5,"description":"Once contained and used in controlled experiments, the coin is now missing after an incident involving a rogue agent.","containment_procedures":"Previously secured in a temporal vault; currently unaccounted for.","discovery_log":"Last seen during a controlled test; now classified as a lost artifact.","addenda_notes":"Investigation into recovery is ongoing.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-12043","codename":"The Sunken Clocktower","classification":"Area","status":"Monitored","power_abilities":{"name":"Temporal Regression","description":"A submerged ruin where time flows backward at a variable rate, causing travelers to de-age upon entry."},"level":4,"description":"Located at the bottom of an uncharted lake, this ancient clocktower exhibits an unnatural reversal of time. It poses risks to those who inadvertently enter its vicinity.","containment_procedures":"A secured perimeter is maintained to prevent accidental entry; research is ongoing.","discovery_log":"Discovered during a survey of anomalous aquatic sites; remains under continuous observation.","addenda_notes":"Subject to further temporal studies to determine safe entry protocols.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-98456","codename":"The Theater of Rewritten Fate","classification":"Event","status":"Ongoing","power_abilities":{"name":"Fated Performance","description":"A mysterious theater that appears unpredictably. Attendees are forced to view a play depicting their future and are then given an irreversible choice to change one event in their lives."},"level":3,"description":"This temporal phenomenon manifests sporadically in various eras. Those who participate in the play risk permanent alterations to their personal timeline.","containment_procedures":"Monitoring units are deployed to track its appearances; direct intervention is limited due to unpredictable nature.","discovery_log":"First documented after multiple reports of vanished individuals; remains an active temporal anomaly.","addenda_notes":"Further study is needed to assess long-term consequences of altering fate.","affiliations":["Ouroboros Organization"]},{"unique_identifier":"ARC-07888","codename":"Benjamin Button","classification":"Entity","status":"Active, Rogue","power_abilities":{"name":"Reverse Chronology","description":"Exhibits reverse aging; the subject's physical body ages backward over time. This anomaly creates unpredictable effects on personal timeline stability."},"level":5,"description":"Codenamed 'Benjamin Button' due to his reverse aging trait, this entity's power is reminiscent of the film but is entirely an independent anomaly. His condition poses unique challenges to temporal stability and personal continuity.","containment_procedures":"Contained within a temporal stabilization chamber to mitigate uncontrolled reverse aging effects.","discovery_log":"Discovered in a small town after reports of an individual whose biological age contradicted his chronological age; further details remain classified.","addenda_notes":"Ongoing research is evaluating the potential applications and risks of reverse chronology in human subjects.","affiliations":["Ouroboros Organization"]}]
+[
+  {
+    "unique_identifier": "ARC-00001",
+    "codename": "Adam - The History Fog",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "The History Fog",
+      "description": "All records of his past are obscured, making it impossible to track his true origins."
+    },
+    "level": 0,
+    "description": "Adam is one of the founding members of the Ouroboros Organization. His existence is shrouded in mystery—every attempt to document him is lost in the fog of time. He appears unpredictably to guide the Foundation at crucial moments.",
+    "containment_procedures": "Due to his nature, standard containment is not applicable. He is monitored indirectly via the Foundation’s temporal network.",
+    "discovery_log": "First observed during the early formation of Ouroboros. All records have been obscured by his unique power.",
+    "addenda_notes": "Ongoing research into subject's interactions with temporal anomalies.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-00005",
+    "codename": "The Oracle - The Machine Seer",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "Infinite Sight",
+      "description": "A first-generation seer integrated with advanced machinery, allowing her to process vast amounts of future data. She remains immune to temporal paradoxes."
+    },
+    "level": 1,
+    "description": "The Oracle is fused with the core systems of Ouroboros, acting as the strategic mind behind operations. Her origins have been erased from the timeline, leaving only her function as a predictive engine.",
+    "containment_procedures": "Maintained within the Ouroboros mainframe; physical containment is unnecessary.",
+    "discovery_log": "Discovered during a significant temporal anomaly event. Full records remain classified.",
+    "addenda_notes": "Critical for operational decisions and timeline stabilization.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-00391",
+    "codename": "Holo - The Librarian",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "Watcher Library",
+      "description": "An esper power that records all events in time in a vast, metaphysical library. Capable of preserving even those events altered or erased from conventional history."
+    },
+    "level": 2,
+    "description": "Holo embodies the law of record-keeping in the world. Through the Watcher Library, every anomaly is logged and archived, making him indispensable for maintaining timeline integrity.",
+    "containment_procedures": "Integrated with Ouroboros archival systems; continuous monitoring is maintained.",
+    "discovery_log": "Established during the Foundation's initial efforts to catalog temporal anomalies.",
+    "addenda_notes": "Serves as the primary reference for all historical and temporal data.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-00027",
+    "codename": "Cain - The Sage",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "The Eternal Witness",
+      "description": "An immortal anomaly who has lived countless lives as king, beggar, scholar, and merchant. Notably known in one era as Solomon, though devoid of demonic influences."
+    },
+    "level": 3,
+    "description": "Cain is a timeless observer, embodying the wisdom and immutable laws of history. His experiences span across eras, and he advises the Foundation on the unalterable aspects of the timeline.",
+    "containment_procedures": "Subject is allowed freedom within secure temporal zones; his natural integration with history precludes standard containment.",
+    "discovery_log": "Records span across unrecorded eras; his presence is accepted as a natural constant.",
+    "addenda_notes": "A pivotal advisor on the immutable laws of time.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-999999",
+    "codename": "Noah - The Survivor",
+    "classification": "Entity",
+    "status": "Active, Joined",
+    "power_abilities": {
+      "name": "The Absolute Event",
+      "description": "Ensures that humanity endures across all possible futures. Attempts to erase or alter Noah result in immediate temporal corrections that guarantee her survival."
+    },
+    "level": 4,
+    "description": "Noah represents the future that must occur—the living proof of humanity’s continued existence. Her presence is a fixed point that stabilizes the timeline, making extinction impossible.",
+    "containment_procedures": "Traditional containment is not applicable due to paradox immunity; the subject is monitored for timeline integrity.",
+    "discovery_log": "Identified as a key temporal anomaly whose survival ensures a viable future for humanity.",
+    "addenda_notes": "Her continued existence is a guaranteed event across all recorded history.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-43271",
+    "codename": "The Blade of Eternal Dusk",
+    "classification": "Artifact",
+    "status": "Secure Containment",
+    "power_abilities": {
+      "name": "Time Freeze",
+      "description": "A longsword that freezes time within its cutting path for exactly 4 seconds. The user is also affected, acting only after time resumes."
+    },
+    "level": 4,
+    "description": "This black longsword with glowing red runes was discovered on an ancient battlefield. Its origins are unknown, and its potential for halting temporal flow makes it a high-risk artifact.",
+    "containment_procedures": "Stored in a secure temporal vault; only accessible under strict protocols.",
+    "discovery_log": "Recovered from ancient ruins; further study is ongoing.",
+    "addenda_notes": "Artifact exhibits unpredictable effects when wielded by untrained users.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-01077",
+    "codename": "The Gentleman’s Pocket Watch",
+    "classification": "Artifact",
+    "status": "Contained",
+    "power_abilities": {
+      "name": "Temporal Counter",
+      "description": "A gold pocket watch that counts the number of candies its user eats. Its count remains unaffected by any time alterations—even if the user is erased from history."
+    },
+    "level": 7,
+    "description": "An innocuous-looking pocket watch with an anomalous property: its count continues regardless of timeline changes. It has become a quirky yet reliable tool for recording minor events.",
+    "containment_procedures": "Stored in a low-security archive; periodic testing is performed to verify count integrity.",
+    "discovery_log": "Found on a collector's shelf; its anomaly was discovered during routine testing.",
+    "addenda_notes": "Considered low risk but of interest for its temporal stability.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-77777",
+    "codename": "The Revenant",
+    "classification": "Entity",
+    "status": "Unknown",
+    "power_abilities": {
+      "name": "Perpetual Resurrection",
+      "description": "A man who revives at any point in his past life after death, preserving his memories and enabling him to alter his decisions in each iteration."
+    },
+    "level": 2,
+    "description": "Known as The Revenant, this anomaly has survived for millennia by continuously resurrecting. His motives remain elusive, and his ability to reappear in different eras makes him a persistent enigma.",
+    "containment_procedures": "Currently uncontainable; monitored through multitemporal tracking systems.",
+    "discovery_log": "Subject observed across numerous historical records; classified as high priority due to unpredictability.",
+    "addenda_notes": "Further research is required to determine his long-term impact on the timeline.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-01189",
+    "codename": "The Coin of the Dead",
+    "classification": "Artifact",
+    "status": "Lost",
+    "power_abilities": {
+      "name": "Memory Exchange",
+      "description": "A silver coin that allows its user to exchange one memory with a deceased individual. The dead briefly return to impart information before vanishing; the user permanently loses the exchanged memory."
+    },
+    "level": 5,
+    "description": "Once contained and used in controlled experiments, the coin is now missing after an incident involving a rogue agent.",
+    "containment_procedures": "Previously secured in a temporal vault; currently unaccounted for.",
+    "discovery_log": "Last seen during a controlled test; now classified as a lost artifact.",
+    "addenda_notes": "Investigation into recovery is ongoing.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-12043",
+    "codename": "The Sunken Clocktower",
+    "classification": "Area",
+    "status": "Monitored",
+    "power_abilities": {
+      "name": "Temporal Regression",
+      "description": "A submerged ruin where time flows backward at a variable rate, causing travelers to de-age upon entry."
+    },
+    "level": 4,
+    "description": "Located at the bottom of an uncharted lake, this ancient clocktower exhibits an unnatural reversal of time. It poses risks to those who inadvertently enter its vicinity.",
+    "containment_procedures": "A secured perimeter is maintained to prevent accidental entry; research is ongoing.",
+    "discovery_log": "Discovered during a survey of anomalous aquatic sites; remains under continuous observation.",
+    "addenda_notes": "Subject to further temporal studies to determine safe entry protocols.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-98456",
+    "codename": "The Theater of Rewritten Fate",
+    "classification": "Event",
+    "status": "Ongoing",
+    "power_abilities": {
+      "name": "Fated Performance",
+      "description": "A mysterious theater that appears unpredictably. Attendees are forced to view a play depicting their future and are then given an irreversible choice to change one event in their lives."
+    },
+    "level": 3,
+    "description": "This temporal phenomenon manifests sporadically in various eras. Those who participate in the play risk permanent alterations to their personal timeline.",
+    "containment_procedures": "Monitoring units are deployed to track its appearances; direct intervention is limited due to unpredictable nature.",
+    "discovery_log": "First documented after multiple reports of vanished individuals; remains an active temporal anomaly.",
+    "addenda_notes": "Further study is needed to assess long-term consequences of altering fate.",
+    "affiliations": ["Ouroboros Organization"]
+  },
+  {
+    "unique_identifier": "ARC-07888",
+    "codename": "Benjamin Button",
+    "classification": "Entity",
+    "status": "Active, Rogue",
+    "power_abilities": {
+      "name": "Reverse Chronology",
+      "description": "Exhibits reverse aging; the subject's physical body ages backward over time. This anomaly creates unpredictable effects on personal timeline stability."
+    },
+    "level": 5,
+    "description": "Codenamed 'Benjamin Button' due to his reverse aging trait, this entity's power is reminiscent of the film but is entirely an independent anomaly. His condition poses unique challenges to temporal stability and personal continuity.",
+    "containment_procedures": "Contained within a temporal stabilization chamber to mitigate uncontrolled reverse aging effects.",
+    "discovery_log": "Discovered in a small town after reports of an individual whose biological age contradicted his chronological age; further details remain classified.",
+    "addenda_notes": "Ongoing research is evaluating the potential applications and risks of reverse chronology in human subjects.",
+    "affiliations": ["Ouroboros Organization"]
+  }
+]
