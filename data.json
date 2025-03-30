@@ -89,7 +89,7 @@
       "description": "A longsword that freezes time within its cutting path for exactly 4 seconds. The user is also affected, acting only after time resumes."
     },
     "level": 4,
-    "description": "This black longsword with a red shimmer was discovered on an ancient battlefield. Its origins are unknown, and its potential for halting temporal flow makes it a high-risk artifact.",
+    "description": "This black longsword with glowing red runes was discovered on an ancient battlefield. Its origins are unknown, and its potential for halting temporal flow makes it a high-risk artifact.",
     "containment_procedures": "Stored in a secure temporal vault; only accessible under strict protocols.",
     "discovery_log": "Recovered from ancient ruins; further study is ongoing.",
     "addenda_notes": "Artifact exhibits unpredictable effects when wielded by untrained users.",
@@ -175,20 +175,197 @@
     "addenda_notes": "Further study is needed to assess long-term consequences of altering fate.",
     "affiliations": ["Ouroboros Organization"]
   },
-  {
-    "unique_identifier": "ARC-07888",
-    "codename": "Benjamin Button",
-    "classification": "Entity",
-    "status": "Active, Rogue",
-    "power_abilities": {
-      "name": "Reverse Chronology",
-      "description": "Exhibits reverse aging; the subject's physical body ages backward over time. This anomaly creates unpredictable effects on personal timeline stability."
+    {
+      "unique_identifier": "ARC-07888",
+      "codename": "Benjamin Button",
+      "classification": "Entity",
+      "status": "Active, Rogue",
+      "power_abilities": {
+        "name": "Reverse Chronology",
+        "description": "Exhibits reverse aging; the subject's physical body ages backward over time. This anomaly creates unpredictable effects on personal timeline stability."
+      },
+      "level": 5,
+      "description": "Codenamed 'Benjamin Button' due to his reverse aging trait, this entity's power is reminiscent of the film but is entirely an independent anomaly. His condition poses unique challenges to temporal stability and personal continuity.",
+      "containment_procedures": "Contained within a temporal stabilization chamber to mitigate uncontrolled reverse aging effects.",
+      "discovery_log": "Discovered in a small town after reports of an individual whose biological age contradicted his chronological age; further details remain classified.",
+      "addenda_notes": "Ongoing research is evaluating the potential applications and risks of reverse chronology in human subjects.",
+      "affiliations": ["Ouroboros Organization"]
     },
-    "level": 5,
-    "description": "Codenamed 'Benjamin Button' due to his reverse aging trait, this entity's power is reminiscent of the film but is entirely an independent anomaly. His condition poses unique challenges to temporal stability and personal continuity.",
-    "containment_procedures": "Contained within a temporal stabilization chamber to mitigate uncontrolled reverse aging effects.",
-    "discovery_log": "Discovered in a small town after reports of an individual whose biological age contradicted his chronological age; further details remain classified.",
-    "addenda_notes": "Ongoing research is evaluating the potential applications and risks of reverse chronology in human subjects.",
-    "affiliations": ["Ouroboros Organization"]
-  }
-]
+    {
+      "unique_identifier": "ARC-20001",
+      "codename": "Mass-Produced Time Suit",
+      "classification": "Artifact",
+      "status": "Contained",
+      "power_abilities": {
+        "name": "Temporal Shield",
+        "description": "A standardized time suit that prevents time alterations from affecting the wearer. It requires high energy consumption and is not suitable for prolonged use."
+      },
+      "level": 5,
+      "description": "A mass-produced suit designed for temporary protection against time distortions. While effective in the short term, its heavy energy demands make it impractical for extended missions.",
+      "containment_procedures": "Stored in a secure technology vault. Issued only under strict operational protocols.",
+      "discovery_log": "Developed by OUROBOS engineers during the early 4D incursions.",
+      "addenda_notes": "Regular energy audits required to monitor suit performance.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20002",
+      "codename": "The Missing Day",
+      "classification": "Event",
+      "status": "Ongoing",
+      "power_abilities": {
+        "name": "Temporal Erasure",
+        "description": "A time rift occurring between July 7 and 9 of an unspecified year, causing the world to skip an entire day without notice."
+      },
+      "level": 4,
+      "description": "An inexplicable temporal event where a day vanishes from existence. Despite its global impact, no one notices the missing day as events resume normally afterward.",
+      "containment_procedures": "Monitored remotely with minimal intervention to avoid further timeline disruption.",
+      "discovery_log": "First recorded following anomalous temporal sensor readings spanning July 7–9.",
+      "addenda_notes": "Research into the cause and potential recovery of the lost time is ongoing.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20003",
+      "codename": "Time Crystal Cavern",
+      "classification": "Area",
+      "status": "Under Organization Control",
+      "power_abilities": {
+        "name": "Condensed Temporal Energy",
+        "description": "A cavern located between the Missing Day rift that converts stolen time from July 8 into highly condensed crystal energy."
+      },
+      "level": 4,
+      "description": "An underground cavern that harnesses temporal energy by crystallizing the lost time from a vanished day. The cavern is tightly controlled by OUROBOS for study and strategic resource extraction.",
+      "containment_procedures": "Secured perimeter and continuous energy monitoring are maintained.",
+      "discovery_log": "Identified shortly after the observation of the Missing Day phenomenon.",
+      "addenda_notes": "Further analysis on energy stability and potential applications is underway.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20004",
+      "codename": "Time Crystal",
+      "classification": "Artifact",
+      "status": "Contained",
+      "power_abilities": {
+        "name": "Temporal Conduction",
+        "description": "A crystalline artifact formed from concentrated temporal energy. It exhibits unique properties that manipulate time flow on a small scale."
+      },
+      "level": 5,
+      "description": "An artifact derived from the energy of the Time Crystal Cavern. Its properties include subtle time dilation and acceleration effects, making it a subject of intense study.",
+      "containment_procedures": "Housed in a secure temporal containment unit with strict energy regulation protocols.",
+      "discovery_log": "Recovered from within the Time Crystal Cavern.",
+      "addenda_notes": "Potential applications in controlled time manipulation are being investigated.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20005",
+      "codename": "The Infinite Castle",
+      "classification": "Area",
+      "status": "Active, Operational",
+      "power_abilities": {
+        "name": "Temporal Nexus",
+        "description": "A fortress that exists both as a physical structure and a temporal conduit, enabling time travel and housing integrated technologies, magic, and part of the Oracle’s consciousness."
+      },
+      "level": 0,
+      "description": "The headquarters of OUROBOS, the Infinite Castle is both an impenetrable fortress and a gateway to time travel. It serves as a backup body for the Oracle, enhancing her computational and predictive capabilities while operating in power-saving modes.",
+      "containment_procedures": "Maintained by high-level security protocols and temporal stabilization systems.",
+      "discovery_log": "Established as the nexus for OUROBOS operations, its origins are intertwined with the organization’s early history.",
+      "addenda_notes": "Critical for both defensive operations and strategic time manipulation.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20006",
+      "codename": "The Ark",
+      "classification": "Artifact",
+      "status": "Damaged",
+      "power_abilities": {
+        "name": "Chrono-Vessel",
+        "description": "A highly advanced space-time ship capable of protecting its occupant from even 0-level singularities. Its operations require enormous energy consumption."
+      },
+      "level": 0,
+      "description": "A cutting-edge vessel that transported Noah into the past. Though it offers exceptional protection, its extreme energy demands limit its usage to only the most critical situations.",
+      "containment_procedures": "Under repair and maintained in a dedicated temporal hangar with energy reserves closely monitored.",
+      "discovery_log": "Recovered during a high-priority temporal incursion; its technology remains partially experimental.",
+      "addenda_notes": "Currently undergoing repairs due to energy instability and structural damage.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20007",
+      "codename": "Zues",
+      "classification": "Entity",
+      "status": "Active, Joined",
+      "power_abilities": {
+        "name": "Electrokinetic Command",
+        "description": "An esper from ancient Greece who masqueraded as the god Zues. His electrical power can incinerate an oak tree on command, though he requires the time suit to mitigate timeline alterations."
+      },
+      "level": 3,
+      "description": "Zues, captain of Squad 9 from the Temporal Investigation Bureau, uses his mastery over electricity and his specialized time suit during missions. His deceptive nature allowed him to pass as a Greek deity among mortals.",
+      "containment_procedures": "Operates under controlled deployment conditions with integrated time suit monitoring.",
+      "discovery_log": "Identified during a mission in ancient Greece; his true nature was revealed during temporal stabilization protocols.",
+      "addenda_notes": "Regular performance reviews are conducted to assess his integration with timeline protocols.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20008",
+      "codename": "Lu ZiGang",
+      "classification": "Entity",
+      "status": "Active, Joined",
+      "power_abilities": {
+        "name": "Temporal Alteration",
+        "description": "Originally a jade worker from ancient China whose intervention on a mission caused a significant timeline alteration. His timeline was split—one version became 'Faceless' while the older self evolved into a monk."
+      },
+      "level": 3,
+      "description": "Lu ZiGang's unique experience of diverging timelines has left him with dual identities. The older version lives as a monk while the younger, 'Faceless' version is absorbed into OUROBOS operations, contributing his expertise on temporal anomalies.",
+      "containment_procedures": "Monitored through multitemporal tracking; operates under specialized containment protocols that account for dual timeline existence.",
+      "discovery_log": "Detected following a major mission incident involving timeline separation; subsequent investigations confirmed his dual nature.",
+      "addenda_notes": "Continued research required to fully understand his dual identity and its implications on historical events.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20009",
+      "codename": "Ling Shen - The Mad Scientist",
+      "classification": "Entity",
+      "status": "Active, Joined",
+      "power_abilities": {
+        "name": "Self-cloning Technology",
+        "description": "Generates multiple clones to work, research, fight and die for him, they are all loyal and obey any order."
+      },
+      "level": 3,
+      "description": "A powerful Second Generation Singularity, Ling Shen was once a rogue singularity before joining OUROBOS. His brilliance and reckless pursuit of forbidden knowledge make him both a valuable and unpredictable asset. He himself is a clone that replaced and took over as the original after the original died, when he die, a new clone will take his place and the cycle goes on, creating a form of immortality.",
+      "containment_procedures": "Operates independently under specialized monitoring; his anchor makes standard containment protocols ineffective.",
+      "discovery_log": "Identified after a series of chaotic temporal events attributed to rogue singularity behavior.",
+      "addenda_notes": "His unyielding adherence to personal rules and revelations of his true identity pose potential risks in controlled operations.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20010",
+      "codename": "Ye Shen - The Phantom Manipulator",
+      "classification": "Entity",
+      "status": "Active, Joined",
+      "power_abilities": {
+        "name": "Memory and Identity Rewriting",
+        "description": "Masterfully rewrites memories and identities with a mere glance or word, remaining elusive through constant disguise and erasure of traces. Highly dangerous as he can play with the human's mind as an omnipotent god."
+      },
+      "level": 3,
+      "description": "A former rogue singularity, Ye Shen now operates as a high-level agent. His uncanny manipulation of minds and identities makes him both a formidable asset and a potential threat.",
+      "containment_procedures": "Operates with minimal direct oversight due to his autonomous nature; continuous monitoring ensures his actions remain within operational boundaries.",
+      "discovery_log": "First detected during an incident marked by extensive memory and identity distortions across multiple timelines.",
+      "addenda_notes": "His subtle influence often renders him a silent orchestrator behind major events.",
+      "affiliations": ["Ouroboros Organization"]
+    },
+    {
+      "unique_identifier": "ARC-20011",
+      "codename": "Jing Shen - The Apostle of Madness",
+      "classification": "Entity",
+      "status": "Active, Joined",
+      "power_abilities": {
+        "name": "Reality-Bending Belief",
+        "description": "Alters reality based solely on his fervent beliefs; his power intensifies with his delusions, reshaping the world around him."
+      },
+      "level": 3,
+      "description": "Once a rogue singularity, Jing Shen now serves as an unpredictable yet potent agent within OUROBOS. His ability to reshape reality through sheer belief marks him as both dangerous and crucial in chaotic operations.",
+      "containment_procedures": "Subject to dynamic containment protocols designed to adapt to his shifting reality-bending effects.",
+      "discovery_log": "Confirmed during an episode of extreme temporal distortion, where his delusional state triggered significant anomalies.",
+      "addenda_notes": "His fanaticism is both a source of power and a liability, requiring careful management during missions.",
+      "affiliations": ["Ouroboros Organization"]
+    }
+  ]
+}
