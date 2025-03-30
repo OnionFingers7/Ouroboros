@@ -64,7 +64,7 @@
     "affiliations": ["Ouroboros Organization"]
   },
   {
-    "unique_identifier": "ARC-999999",
+    "unique_identifier": "ARC-99999",
     "codename": "Noah - The Survivor",
     "classification": "Entity",
     "status": "Active, Joined",
@@ -208,7 +208,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20002",
+      "unique_identifier": "ARC-41343",
       "codename": "The Missing Day",
       "classification": "Event",
       "status": "Ongoing",
@@ -224,7 +224,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20003",
+      "unique_identifier": "ARC-35617",
       "codename": "Time Crystal Cavern",
       "classification": "Area",
       "status": "Under Organization Control",
@@ -240,7 +240,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20004",
+      "unique_identifier": "ARC-35618",
       "codename": "Time Crystal",
       "classification": "Artifact",
       "status": "Contained",
@@ -256,7 +256,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20005",
+      "unique_identifier": "ARC-00004",
       "codename": "The Infinite Castle",
       "classification": "Area",
       "status": "Active, Operational",
@@ -272,7 +272,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20006",
+      "unique_identifier": "ARC-99998",
       "codename": "The Ark",
       "classification": "Artifact",
       "status": "Damaged",
@@ -288,7 +288,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20007",
+      "unique_identifier": "ARC-93340",
       "codename": "Zues",
       "classification": "Entity",
       "status": "Active, Joined",
@@ -304,7 +304,7 @@
       "affiliations": ["Ouroboros Organization"]
     },
     {
-      "unique_identifier": "ARC-20008",
+      "unique_identifier": "ARC-96656",
       "codename": "Lu ZiGang",
       "classification": "Entity",
       "status": "Active, Joined",
