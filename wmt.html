@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OUROBOROS Archive - Maintenance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600;700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #111;
+      --text-color: #ddd;
+      --accent-color: #ff0099;
+      --nav-bg: rgba(34, 34, 34, 0.95);
+      --header-height: 250px;
+      --transition-speed: 0.3s;
+      --btn-bg: #333;
+    }
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: var(--accent-color);
+      transition: color var(--transition-speed);
+    }
+    a:hover {
+      color: #fff;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* HEADER */
+    header {
+      background: url("images/headerlogo.webp") center center no-repeat;
+      background-size: cover;
+      min-height: var(--header-height);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    header .site-title {
+      font-size: 2.5em;
+      color: #d30070;
+      font-family: 'PT Sans Narrow', sans-serif;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    }
+    header .tagline {
+      font-size: 1.1em;
+      color: #c0c0c0;
+      font-style: italic;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+    }
+    /* NAVIGATION (sticky) */
+    nav {
+      background-color: var(--nav-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      position: relative;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 0;
+    }
+    .nav-item a {
+      padding: 5px 10px;
+      white-space: nowrap;
+    }
+    /* Dropdown styling for desktop */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--nav-bg);
+      border: 1px solid rgba(255,0,153,0.3);
+      display: none;
+      min-width: 160px;
+      z-index: 200;
+    }
+    .dropdown a {
+      display: block;
+      padding: 8px 12px;
+      white-space: nowrap;
+    }
+    .dropdown a:hover {
+      background-color: rgba(255, 0, 153, 0.2);
+    }
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-right input[type="search"] {
+      padding: 6px 10px;
+      font-size: 1em;
+      width: 180px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      background-color: #333;
+      color: var(--text-color);
+      transition: width var(--transition-speed);
+    }
+    .nav-right input[type="search"]:focus {
+      width: 250px;
+      outline: none;
+    }
+    /* Mobile Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--accent-color);
+      margin: 3px 0;
+      transition: all var(--transition-speed);
+    }
+    /* Mobile menu container fixed below nav */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--nav-bg);
+      flex-direction: column;
+      z-index: 90;
+    }
+    .mobile-menu a {
+      padding: 10px 20px;
+      border-top: 1px solid rgba(255,0,153,0.2);
+    }
+    /* CONTENT SECTIONS */
+    .content-section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2, h3 {
+      color: var(--accent-color);
+      margin-top: 15px;
+      font-family: 'PT Sans Narrow', sans-serif;
+    }
+    /* FOOTER */
+    footer {
+      background-color: var(--nav-bg);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.8em;
+      color: #bbb;
+    }
+    footer a {
+      color: var(--accent-color);
+      margin: 0 5px;
+      font-size: 0.9em;
+    }
+    /* Back-to-Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #222;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      transition: opacity var(--transition-speed), transform var(--transition-speed);
+      z-index: 100;
+      font-size: 1em;
+      border: 1px solid #444;
+    }
+    #back-to-top:hover {
+      transform: scale(1.05);
+    }
+    /* SCROLLBAR CUSTOMIZATION */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: repeating-linear-gradient(
+        135deg,
+        #444 0,
+        #444 5px,
+        #333 5px,
+        #333 10px
+      );
+      border-radius: 2px;
+      border: 1px solid #000;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: repeating-linear-gradient(
+        135deg,
+        #666 0,
+        #666 5px,
+        #444 5px,
+        #444 10px
+      );
+    }
+    html {
+      scrollbar-color: #444 #111;
+      scrollbar-width: thin;
+    }
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .nav-left {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .nav-right {
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="site-title">OUROBOROS</div>
+    <div class="tagline">"History is not a record, it is a battlefield."</div>
+  </header>
+
+  <!-- NAVIGATION (sticky) -->
+  <nav>
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-left">
+      <div class="nav-item"><a href="wmt.html">About</a></div>
+      <div class="nav-item">
+        <a href="wmt.html">Database</a>
+        <div class="dropdown">
+          <a href="wmt.html" target="_blank">Articles</a>
+          <a href="wmt.html" target="_blank">Guidelines</a>
+          <a href="wmt.html" target="_blank">History</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="wmt.html">Community</a>
+        <div class="dropdown">
+          <a href="wmt.html" target="_blank">Forum</a>
+          <a href="wmt.html" target="_blank">Contribute</a>
+          <a href="wmt.html" target="_blank">FAQ</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="wmt.html" target="_blank">System</a></div>
+      <div class="nav-item"><a href="wmt.html" target="_blank">Contact</a></div>
+    </div>
+    <div class="nav-right">
+      <input type="search" placeholder="Search records...">
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="wmt.html">About</a>
+    <a href="wmt.html">Database</a>
+    <a href="wmt.html">Community</a>
+    <a href="wmt.html" target="_blank">System</a>
+    <a href="wmt.html" target="_blank">Contact</a>
+  </div>
+
+  <!-- MAIN CONTENT: Maintenance Message -->
+  <div class="content-section" id="maintenance" style="text-align: center; margin-top: 50px;">
+    <h1 style="font-size: 4em; margin-bottom: 20px;">WEBSITE UNDER MAINTENANCE</h1>
+    <p style="font-size: 1.5em;">We are working hard to improve our website. Please check back soon.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Ouroboros Organization. All rights reserved.</p>
+    <p>
+      <a href="wmt.html" target="_blank">Terms of Service</a> | 
+      <a href="wmt.html" target="_blank">Licenses</a> | 
+      <a href="wmt.html" target="_blank">Copyright</a>
+      | <a href="wmt.html" target="_blank">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <div id="back-to-top" onclick="scrollToTop()">↑ Top</div>
+
+  <!-- JavaScript for navigation and back-to-top functionality -->
+  <script>
+    // Back-to-Top Button functionality
+    window.addEventListener("scroll", () => {
+      const btn = document.getElementById("back-to-top");
+      btn.style.display = (window.scrollY > 300) ? "block" : "none";
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Hamburger menu toggle for mobile
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    hamburger.addEventListener("click", () => {
+      mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+</body>
+</html>
